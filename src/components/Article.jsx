@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Content, Title, PublishButton } from "./index"
+import { Content, Title, PublishButton, TextInput, Counter, ToggleButton } from "./index"
 
 const Article = (props) => {
   const [isPublished, setIsPublished] = useState(false);
@@ -12,6 +12,9 @@ const Article = (props) => {
     <div>
       <Title title={props.title} />
       <Content content={props.content} />
+      <Counter />
+      <TextInput />
+      <ToggleButton />
       <PublishButton isPublished={isPublished} onClick={publishArticle} />
     </div>
   )
