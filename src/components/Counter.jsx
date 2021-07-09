@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
@@ -10,6 +10,11 @@ const Counter = () => {
   const countDown = () => {
     setCount(prevState => prevState - 1)
   }
+
+  useEffect(() => {
+    // console.log("Current count is...", count);
+    console.log('didmount');
+  }, [])
 
   return (
     <div>
